@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  jekyll:
+    build: 
+        context: ./
+        dockerfile: Dockerfile
+    container_name: mikeguantonio-blog
+    environment:
+        - JEKYLL_ENV=docker
+        - PAGES_REPO_NWO='MikeGuantonio/mikeguantonio.github.io'
+    command: jekyll serve --watch --force_polling --livereload
+    ports: 
+        - 4000:4000    # main site port
+        - 35729:35729  # livereload port
+    volumes: 
+        - .:/srv/jekyll
+        - ./vendor/bundle:/usr/gem/

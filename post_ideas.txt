@@ -1,0 +1,53 @@
+Title: Its ok to be lazy
+Description: Utilizing docker run to do alot of my testing. It took a long time to remember all the run commands. 
+             Found docker-compose and that was much faster. Speak of what docker-compose does vs Dockerfile
+             Mentioned that the lessons learned means that I can now use docker-compose for most things, but docker run for testing
+
+Title: Using docker .env files
+Description: What is good about this and how can .env files help us later. 
+
+Title: Networking with docker container and how to use the values internally and externally
+
+Title: Setting up a shared volume mount vs defining volume in container
+
+Title: How do container volumes work with init container. Overrideing a file vs a directory
+
+Title Adding data store via database or redis on an Open Shift cluster
+
+Title: Dealing with internal networking vs external networking
+
+Title: Lists are the worst
+Description: I keep lists of everything  but get nothing done. Its time to nuke the lists and start over. Psychology of staring over and removing lists. 
+             List Obsession. How listing what we can do isn't actually what we get done
+
+Title: Knowledge wants to be shared
+Description: Too many times people hoard information and features to themselves to become a "source of Knowledge" in thier position. This is bad for a number of ways. 
+
+Title: Scripting with git
+Description: How to use git diff with no-exit code. This was missing and how to do some git stuff with that. 
+
+Title: Your code as a crime scene. Using git bisect to get things done. 
+
+Title: Using bind with dockerfiles to not create a directory if one does not exist. 
+Description: Problem was with plex and a local external drive, created a new folder 
+            did not behave how I thought. 
+
+
+Title: Start Monolith First
+Description: Too many times teams try to do microservices first. Why? 
+
+Title: Cloud Native Maturity Model
+Description: How can you see if you are ready for cloud native? 
+
+Title: Building with Evolutionaly architecture in mind. 
+Description: How to make sure you are ready for change. 
+
+Title: How to set up a testing workshop with real code
+Description: How can teams use their real code to do real work and get better at the same time. 
+
+Title: It all starts with the contianer. The journey to cloud native
+
+Title: What is legacy code? Code we are afraid to change because it has no tests. 
+
+Title: What is a microservice? Its a buzz word. 
+
