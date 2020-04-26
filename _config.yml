@@ -31,16 +31,16 @@ github_username:  jekyll
 
 # Build settings
 #theme: jekyll-theme-architect
-# theme: minima
-#plugins:
-#  - jekyll-feed
-theme: jekyll-theme-hydeout
+theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate  
+#theme: jekyll-theme-hydeout
+#plugins:
+#  - jekyll-feed
+#  - jekyll-gist
+#  - jekyll-paginate  
 
-paginate: 5
+# paginate: 5
 
 # Exclude from processing.
 # The following items will not be processed, by default.
