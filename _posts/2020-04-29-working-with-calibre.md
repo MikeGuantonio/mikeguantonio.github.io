@@ -14,7 +14,7 @@ Getting Docker up and running on my Linux box (Ubuntu 18.04) wasn't that hard at
 Installation was a "snap"! All I had to do was run ``` bash sudo snap install docker ```. This installed the docker program on my Linux box and allowed me to run docker through the command line. It was thrilling.
 
 The next step was to try to find a docker image that allowed me to run a docker container of calibre. This again was not hard at all because calibre was already in the docker registry. I went with the version from the LinuxServer.io team because it was the first one that I found for my search result. Maybe another time I'll play around with creating my own image or even run this image against anchore for vulnerabilities, but for now time was of the essence! These books would not be gathering metadata about themselves! [https://hub.docker.com/r/linuxserver/calibre]
-
+ 
 
 Pulling the images down didn't take any time at all. I'm quite glad and the total image size was only 1.11 GB. While I'm sure there are smaller images out there I think that the real cause for size is the fact that this image is running an embedded guacamole server. {guacamole}.
 Once I had my image pulled and ready to do I could invoke the docker run command and allow me to with my e-book library.
