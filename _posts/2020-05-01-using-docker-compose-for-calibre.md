@@ -66,3 +66,6 @@ services:
     restart: unless-stopped
 ```
 Having the docker files seperated like this gives me exactly the level of control that I would want. I am unlikely to have to constantly import books to my server, but should the need arise I have the ability without trying to memorize a ton of different commands. This leads me to thinking that while it is nice to know the docker commands and how to maintain my local development enviroments using docker, it is also something that I don't always have to be super cognicent of being up to date on. I'm not yet running a cluster at scale and if that was the case I would probably manage something that the CNCF recommends wether that is kubernetes or Open Shift. In short I think I'll use the docker run and docker build commands when I'm testing an image that I'm curious about, but when it comes to working with something that I would like to memorialize I may move it a docker-compose file. That being said, docker-compose also allows me to do exactly the same things with easier syntax, so it could just be more of a situation of where I use to tool because I want to and focus on the real effort (writing code, running servers, building things) because afterall isn't that the entire point of DevOps? 
+
+
+Notes: be sure to include --that's a long command! I'll never remember that! and the call out to two files and two options
