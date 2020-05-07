@@ -1,36 +1,45 @@
 ---
 layout: post
-title:  "Enabling Web Server Access To Calibre"
-date:   2020-04-30 18:51:51 -0500
+title: "Enabling Web Server Access To Calibre"
+date: 2020-04-30 18:51:51 -0500
 # categories: docker
-#   tags: docker
+# tags: docker
 ---
+## Transmit Terror
+
 All was not right with the world. 
 
-I had this solution that worked great on my local desktop. I can manage my e-book collection to my heart's content. But... I'm not often at my desktop when I'm at home. I do somethings when I want to sit down and focus on building a new piece of content or trying to figure out something new for a team. Its a place of work and I'm not too inclined to sit at my desk all day long trying to find a book to read. The more I think about it I'm either reading on my phone or on my Kindle. What ever will I do? 
+I had a solution that worked great on my local desktop. I can manage my e-book collection to my heart's content. But... I'm not often at my desktop when I'm at home. I use that computer when I want to sit down and focus on building a new piece of content or try to figure out a new example to show teams. I use the desktop to also surf the web and hone in on what I want to learn next. Its a place of work and I'm not too inclined to sit at my desk all day long trying to find the next technical tome to pique my interest. Actually, the more I think about it, I'm either reading on my phone or on my Kindle. This is quite the predicament.
 
-Solve the problem with contianers! That's what! So the calibre interface within my current container is running the full desktop version that I would normally have on my computer. This is great, I can have my volume mounts on my host machine and have the running program somewhere else. A real nice seperation of form and function. The downside is that its a heavy service being that its replicating all my actions via RDP and the interface isn't as modern as I'm used to. Call it an aestic problem, but its my home network and I'll have my opinions as I wish. 
 
-So to solve this problem I went back to docker hub to find if there was a web version of calibre that I could use to serve my books. Turns out there is! Its calibre-web. This provides me a set of nice seggregation from me as the end user and book viewer to the me that is the book maintainer and book classifier. Installation was again a snap. All I had to do was run 
+## What Can I Do To Solve This Problem?
 
-```
+Solve the problem with containers! That's what! The calibre interface within my current container is running the full desktop version that I would normally have on my computer. This is great, I can have my volume mounts on my host machine and have the running program somewhere else. A real nice separation of form and function. The downside is that its a heavy service because its replicating all my actions via RDP which just feels like something I set up back in 2008. Also, the interface isn't as modern as I'm used to. Call it an aesthetic problem, but its my home network and I'll have my opinions as I wish.
+
+So to solve this problem I went back to docker hub to find if there was a web version of calibre that I could use to serve my books. Turns out there is! Its [calibre-web](https://hub.docker.com/r/linuxserver/calibre-web/). This provides me a set of nice segregation from myself as the "book discoverer" and "book viewer" to the me that is the "book maintainer" and "book classifier". Installation was again a snap. All I had to do was run
+
+``` bash
 docker create \
-  --name=calibre-web \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=Europe/London \
-  -e DOCKER_MODS=linuxserver/calibre-web:calibre \
-  -p 8083:8083 \
-  -v path to data:/config \
-  -v path to calibre library:/books \
-  --restart unless-stopped \
-  linuxserver/calibre-web
-  ```
+--name=calibre-web \
+-e PUID=1000 \
+-e PGID=1000 \
+-e TZ=America/New_York \
+-e DOCKER_MODS=linuxserver/calibre-web:calibre \
+-p 8083:8083 \
+-v path to data:/config \
+-v path to calibre library:/books \
+--restart unless-stopped \
+linuxserver/calibre-web
+```
 
-  This created another new container that I could then send to my local network and allow my phone and other computers to connect to to pull a copy from the original library configured by calibre. How cool is that? 
+This created another new container that I could then send to my local network and allow my phone and other computers to connect to to pull a copy from the original library configured by calibre. How cool is that?
 
-  The beauty of this is that calibre-web is a front end interface to the calibre container. Now I don't have to worry about having duplicated copied of a book around, I can use calibre-web to view everything that I had stored and not have to worry about reuploading the same book over and over. 
+## Welcome To The World Wide Lib
 
-  That's the real beauty of containers. Everything is always just a command line away from having a running application. When I no longer want to run the server I can just spin down the instance. I no longer have to worry if my server is up to date all the time or if I'm missing operating system patches or if the data is being stored correctly on my machine or the virtual machine I'm calling home for this application. This provides a better seperation on my network for applications that I use all the time and gives me the full control of making certain what I'm spinning up is actually what I want. 
+There is beauty in the simplicity displayed with how these containers are set up. calibre-web is a front end interface to the data generated by the calibre container. Now I don't have to worry about having duplicated copies of a book around. I can use the calibre container to manage my books. I can use calibre-web to view everything that I had stored and not have to worry about re-uploading the same book over and over. Even better is that I can share this out with my network and allow people that visit that want to read a book access via a set of web user accounts.
 
-  This will be another thing I'll be able to bring up in the Dojo. I can allow teams to think more abstractly and have less fear because I'm advocating something that I'm starting to use all of the time. 
+That's the real beauty of containers. Everything is always just a command line away from having a running application. When I no longer want to run the server I can just spin down the instance. I no longer have to worry if my server is up to date all the time or if I'm missing operating system patches or if the data is being stored correctly on my machine or the virtual machine I'm calling home for this application. This provides a better separation on my network for applications that I use all the time and gives me the full control of making certain what I'm spinning up is actually what I want. It also provides me a way to easily use my computer's resources to the fullest and turn off that resource when I don't want it. 
+
+But the most important thing I'm learning here is that I can have multiple containers running that serve the same purpose with a very different outcome. The data is shared by volume and allows me to be a little less locked in to yet another server operating system. 
+
+This will be something I'll also be able to share with my Dojo teams. I think a lot of hesitation about using a new technology like containers comes from not understanding how simple getting things to work can be. I think I can get them to work on the same set of data and create a different presentation layer from that same data. Not only will it give them practice on container internals, but also show that a container can have one job but share its data to allow other containers to act upon that same data set. Plus, maybe my story will spark more reading which is never a bad thing.
