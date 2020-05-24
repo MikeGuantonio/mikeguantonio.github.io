@@ -30,6 +30,12 @@ This technique is great and I would highly recommend it for productivity. There 
   
   This is very important. The entire point of a pomodoro is to do deep work. Spending time figuring out what you are going to do is time lost.
 
+## Estimation
+
+One thing that I happened to left out was the amount of estimation that is required to make this effective. You could just set a timer and work for short bursts and find some amount of success. The real added benefit is to define the work and then map that work to a timer. You will not only get more work done, but it will also be deeply focused on the outcome. This allows me to batch tasks such as taking out the trash, doing dishes, and running the vacuum. Before I started applying this technique, those were three different tasks that would take a total of 15 minutes each. Once I tied them to the technique I was able to see that I could take a total of 25 minutes most of the time and cross all three tasks off of my list. This helped me to get more work done, but it also helped to break down my mental barriers to doing this kind of work. Knowing that it takes 5 minutes to clean my bathroom is something that is easier to swallow than seeing the task ```clean bathroom``` and have no idea how long that will take.
+
+I would recommend doing the timer portion first and get into that groove. Once you are comfortable using that technique start trying to use estimation portion.
+
 ## But What About Communication!?
 
 In my perfect world, I have sealed myself off from people to do deep work for a large amount of time. I let all of my communications be asynchronous so I can focus on the task at hand and I take breaks on a cadence. How is this productive? For me, this has been the most effective way to use my time. I know what I have to do and I can devote all my time to that one task. So instead of wasting the time of figuring out what to do, I already know and I can just focus on the doing.
